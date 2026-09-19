@@ -22,9 +22,9 @@ JavaScript – for game logic and interactivity
 ## Folder Structure
 
 simon-says-game/
-├── index.html
-├── style.css
-├── script.js
+├── pulse-simon-game.html
+├── pulse-simon.css
+├── pulse-simon.js
 └── images/
 
 ## What I Learned
