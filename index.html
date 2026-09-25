@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pulse — a memory game</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Sora:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/Web Development/Simon-says-game/style.css">
+</head>
+<body>
+
+<main class="stage">
+  <header>
+    <h1>Pulse</h1>
+    <p class="subtitle">Watch the pattern glow, then play it back.</p>
+  </header>
+
+  <div class="pad-wrap">
+    <div class="pad" id="pad">
+      <button class="quad" data-color="red"    data-index="0" aria-label="Red pad"></button>
+      <button class="quad" data-color="amber"  data-index="1" aria-label="Amber pad"></button>
+      <button class="quad" data-color="mint"   data-index="2" aria-label="Mint pad"></button>
+      <button class="quad" data-color="violet" data-index="3" aria-label="Violet pad"></button>
+    </div>
+
+    <div class="center">
+      <div class="level-label">Level</div>
+      <div class="level-value" id="levelValue">00</div>
+      <div class="status-text" id="statusText">Press start</div>
+      <button class="start-btn" id="startBtn">Start</button>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="stat">
+      <div class="stat-label">Best</div>
+      <div class="stat-value" id="bestValue">00</div>
+    </div>
+
+    <div class="toggle-group">
+      <label class="toggle-label" for="strictToggle">Strict</label>
+      <span class="switch">
+        <input type="checkbox" id="strictToggle">
+        <span class="switch-track"></span>
+      </span>
+    </div>
+
+    <button class="icon-btn" id="soundBtn" aria-label="Toggle sound" aria-pressed="true" title="Toggle sound">
+      <svg id="soundIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+        <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+        <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+      </svg>
+    </button>
+  </div>
+
+  <footer>
+    Click a pad, or use keys <kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> <kbd>4</kbd>.<br>
+    Strict mode ends the round on any mistake — otherwise you get a replay.
+  </footer>
+</main>
+<script src="/Web Development/Simon-says-game/script.js"></script>
+</body>
+</html>
